@@ -117,6 +117,11 @@ public class MainActivity extends AppCompatActivity {
         OnClickOperacionCapturaNumero1(view);
     }
 
+    public void raiz(View view){
+        operador = "√";
+        OnClickOperacionCapturaNumero1(view);
+    }
+
 
     public void btnigual(View view){
         pantalla = (TextView) findViewById(R.id.labelpantalla);
@@ -136,6 +141,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case "%":
                 resultado=n1%n2;
+                break;
+            case "√":
+                resultado=Math.sqrt(n1);
                 break;
         }
         pantalla.setText(" " + resultado);
